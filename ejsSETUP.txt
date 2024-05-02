@@ -1,0 +1,29 @@
+install ejs 
+{npm i ejs}
+
+configure in app.js
+{app.set("view engine","ejs");}\
+
+{ejs files in views folder} 
+index.ejs --> just like html file
+
+use :
+app.render() instead of app.send()
+
+
+static files : images,stylesheets,javascript
+setup:
+1] configure in app.js
+app.use(express.static("./public"))
+
+2] create a folder public:
+       3] subfolders:
+                images,
+                stylesheets,
+                javascripts
+
+
+
+res.render("contact",{name:"kaif",age:20})          ------------> app.js
+take value from app.js and give to a .ejs file
+<%= age%>                                            ------------- in [index.ejs] put this
